@@ -1,0 +1,8 @@
+function out = curvature(fun,subx,suby)
+    fun_x     =@(subx,suby) my_diff(@(subx,suby) fun(subx,suby),subx,suby,'x','regular');
+    fun_y     =@(subx,suby) my_diff(@(subx,suby) fun(subx,suby),subx,suby,'y','regular');
+    abs_grad  =@(subx,suby) sqrt(fun_x(subx,suby).^2+fun_y(subx,suby).^2)+0.0001;
+    curv_x    =@(subx,suby) fun_x(subx,suby)./abs_grad(subx,suby);
+    curv_y    =@(subx,suby) fun_y(subx,suby)./abs_grad(subx,suby);
+    out       =my_divergence(@(subx,suby) curv_x(subx,suby),@(subx,suby) curv_y(subx,suby),subx,suby,'regular');
+end

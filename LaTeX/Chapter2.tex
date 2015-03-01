@@ -1,0 +1,59 @@
+\chapter{Getting Started}
+\begin{equation}
+\frac{\partial u}{\partial t} = \nabla \frac{\nabla u}{|\nabla u|}+\lambda_e\left(u-u_0 \right)
+\end{equation}
+
+\begin{equation}
+\frac{\partial u}{\partial t} = \nabla \frac{\nabla u}{|\nabla u|}
+\end{equation}
+
+\begin{equation}
+\hat{D} = \frac{1}{|\nabla u|}
+\end{equation}
+
+\begin{equation}
+\hat{D} = f\left(|\nabla u|\right)
+\end{equation}
+
+\begin{equation}
+\hat{D} = \frac{g\left(|\kappa|\right)}{|\nabla u|}
+\end{equation}
+
+%\begin{equation}
+
+%\end{equation}
+ 
+\begin{equation}
+g(s) = s^p, \quad s>0, p\geq1
+\end{equation}
+
+\begin{equation}
+\kappa = \nabla \cdot  \frac{\nabla u}{|\nabla u|}
+\end{equation}
+
+\begin{equation}
+\nabla  \cdot  \textbf{j}_{(0,0)} \simeq \frac{\textbf{j}^1_{(\frac{1}{2},0)}-\textbf{j}^1_{(-\frac{1}{2},0)}}{h}+\frac{\textbf{j}^2_{(0,\frac{1}{2})}-\textbf{j}^2_{(0,-\frac{1}{2})}}{h}
+\end{equation}
+
+\begin{equation}
+\textbf{j} = (\textbf{j}^1,\textbf{j}^2) = - \frac{g(|\kappa|)}{|\nabla u|} \nabla u = - \frac{g(|\kappa|)}{|\nabla u|} (u_x,u_y)
+\end{equation}
+
+\begin{equation}
+\textbf{j}^1_{(\frac{1}{2},0)} = \left[- \frac{g(|\kappa|)}{|\nabla u|} \cdot u_x \right]_{(\frac{1}{2},0)}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\kappa &= \nabla \cdot \left[\frac{\nabla u}{|\nabla u|}\right] =\frac{\partial}{\partial x}\left[\frac{u_x}{|\nabla u|}\right]+\frac{\partial}{\partial y}\left[\frac{u_y}{|\nabla u|}\right]\\
+&=\frac{\partial}{\partial x}\left[\frac{u_x}{\sqrt{u_x^2+u_y^2}}\right]+\frac{\partial}{\partial y}\left[\frac{u_y}{\sqrt{u_x^2+u_y^2}}\right]
+\end{split}
+\end{equation}
+
+\begin{equation}
+\kappa_{(\frac{1}{2},0)} \simeq \frac{\left[\frac{u_x}{\sqrt{u_x^2+u_y^2}}\right]_{(1,0)}-\left[\frac{u_x}{\sqrt{u_x^2+u_y^2}}\right]_{(0,0)}}{h}+\frac{\left[\frac{u_y}{\sqrt{u_x^2+u_y^2}}\right]_{(\frac{1}{2},1)}-\left[\frac{u_y}{\sqrt{u_x^2+u_y^2}}\right]_{(-\frac{1}{2},1)}}{2h}
+\end{equation}
+
+\begin{equation}
+u_{x{(\frac{1}{2},0})} =  \frac{u_{(1,0)}-u_{(0,0)}}{2h}
+\end{equation}

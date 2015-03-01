@@ -1,0 +1,8 @@
+function [j1,j2] = my_j(fun,subx,suby,p)
+fun_x     =@(subx,suby) my_diff(fun,subx,suby,'x','regular');
+fun_y     =@(subx,suby) my_diff(fun,subx,suby,'y','regular');
+abs_grad  =@(subx,suby) sqrt(fun_x(subx,suby).^2+fun_y(subx,suby).^2)+0.0001;
+
+j1  = -abs(curvature(@(subx,suby) fun,subx,suby)).^p./abs_grad.*fun_x(subx,suby);
+j2  = -abs(curvature(@(subx,suby) ,subx,suby)).^p./abs_grad.*fun_y(subx,suby);
+end
